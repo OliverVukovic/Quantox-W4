@@ -32,12 +32,12 @@
             <button type="button" onclick="jsFunction()">Request access</button>  
           </div>
 
-          <div>
-            <p class="hidd-t">OK!</p>
+          <div id="tacno" class="hidd">
+            <p class="label-ok">OK!</p>
           </div>
 
-          <div>
-            <p class="hidd-f">Oops! Please check your email</p>
+          <div id="netacno" class="hidd">
+            <p class="label-wrong">Oops! Please check your email</p>
           </div>
         </div>
 
@@ -55,16 +55,19 @@
 
     <script>
       function jsFunction() {
-        var x=document.email.value;
-        var monkey=x.indexOf("@");
-        var dot=x.lastIndexOf(".");
-        if (monkey<1 || dot<monkey+2 || dot+2>x.lengt) {
-          document.getElementsByClassName('hidd-f').style.display='block';
+      let emailValue=document.getElementById("email").value;
+        if (!emailValue || !validateEmail(emailValue)) {
+          document.getElementById("tacno").className="hidd";
+          document.getElementById("netacno").className="";
         } else {
-          document.getElementsByClassName('hidd-t').style.display='block';
+          document.getElementById("tacno").className="";
+          document.getElementById("netacno").className="hidd";
         }
-      }
-
+      } 
+      function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+        }
     </script>
     
 </body>
