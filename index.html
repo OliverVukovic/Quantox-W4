@@ -18,28 +18,30 @@
         <img src="./assets/desktop/logo.svg" alt="Logo">
       </div>
       <div class="box">
-        <h1>PUBLISH YOUR PODCAST <span>EVERYWHERE</span></h1>
+        <h1>PUBLISH YOUR PODCASTS <span>EVERYWHERE</span></h1>
   
         <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
           Apple Podcasts, Google Podcasts, Pocket Casts and more!</p> 
 
         <div class="email">
           <div>
-            <input id="email" type="email" name="email" value="" required="" placeholder="Email adress">
+            <input id="email" type="email" name="email" value="" placeholder="Email adress">
           </div>  
   
           <div>
-            <button>Request access</button>  
+            <button type="button" onclick="jsFunction()">Request access</button>  
           </div>
 
           <div>
-            <p class="hidd-text">Oops! Please check your email</p>
+            <p class="hidd-t">OK!</p>
+          </div>
+
+          <div>
+            <p class="hidd-f">Oops! Please check your email</p>
           </div>
         </div>
-        
-        
 
-        <div>
+        <div class="footer-images">
           <img src="./assets/desktop/spotify.svg" alt="Spotify">
           <img src="./assets/desktop/apple-podcast.svg" alt="Apple-podcast">
           <img src="./assets/desktop/google-podcasts.svg" alt="Google-podcasts">
@@ -50,6 +52,20 @@
         <img src="./assets/desktop/bg-pattern-dots.svg" alt="Pattern">
       </div>
     </section>  
+
+    <script>
+      function jsFunction() {
+        var x=document.email.value;
+        var monkey=x.indexOf("@");
+        var dot=x.lastIndexOf(".");
+        if (monkey<1 || dot<monkey+2 || dot+2>x.lengt) {
+          document.getElementsByClassName('hidd-f').style.display='block';
+        } else {
+          document.getElementsByClassName('hidd-t').style.display='block';
+        }
+      }
+
+    </script>
     
 </body>
 </html>
