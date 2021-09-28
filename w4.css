@@ -166,7 +166,7 @@ button:hover {
     }
 
     .pattern {
-        transform: translate(-220%, 240%);
+        transform: translate(-220%, 205%);
     }
 
     h1 {
@@ -189,7 +189,7 @@ button:hover {
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
 
     body {
         width: 100%;
@@ -224,7 +224,7 @@ button:hover {
     }
     
     h1 {
-        max-width: 90%;
+        max-width: 100%;
         font-size: 27px;
         padding-top: 60px;
     }
@@ -262,12 +262,29 @@ button:hover {
         height: 55px;
     }
 
+    .hidd {
+        max-width: 100%;
+        padding-bottom: 20%;
+    }
+
+    .label-ok {
+        max-width: 100%;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .label-wrong {
+        max-width: 100%;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
     .spotify {
         width: 25%;
     }
 
     .apple {
-        width: 20%;
+        width: 10%;
     }
 
     .google {
@@ -278,4 +295,43 @@ button:hover {
         width: 25%;
     }
 
+}
+
+@media (max-width: 320px) {
+
+    .logo {
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .email {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    input {
+        max-width: 250px;
+    }
+
+    button {
+        max-width: 250px;
+    }
+
+    .hidd {
+        padding-bottom: 0%;
+    }
+
+    .label-ok {
+        margin-bottom: 0px;
+        order: 4;
+    }
+
+    .label-wrong {
+        margin-bottom: 10px;
+        order: 3;
+    }
+    
 }
