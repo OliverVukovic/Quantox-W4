@@ -114,16 +114,19 @@ button:hover {
     cursor: pointer;
 }
 
-.hidd-t {
+.label-ok {
     color: green;
     font-size: 12px;
-    visibility: hidden;
 }
 
-.hidd-f {
+.label-wrong {
     color: #fb3e3e;
     font-size: 12px;
+}
+
+.hidd {
     visibility: hidden;
+    display: none;
 }
 
 .footer-images {
