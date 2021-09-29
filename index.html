@@ -31,12 +31,12 @@
             <button type="button" onclick="jsFunction()">Request access</button>  
           </div>
 
-          <div id="ok" class="hidd">
-            <p class="label-ok">OK!</p>
+          <div id="correct" class="hidd">
+            <p class="label-correct">Your email is correct!</p>
           </div>
 
           <div id="wrong" class="hidd">
-            <p class="label-wrong">Oops! Please check your email</p>
+            <p class="label-wrong">Oops! Please check Your email</p>
           </div>
         </div>
 
@@ -57,10 +57,10 @@
 
       let emailValue=document.getElementById("email").value;
         if (!emailValue || !validateEmail(emailValue)) {
-          document.getElementById("ok").className="hidd";
+          document.getElementById("correct").className="hidd";
           document.getElementById("wrong").className="";
         } else {
-          document.getElementById("ok").className="";
+          document.getElementById("correct").className="";
           document.getElementById("wrong").className="hidd";
         }
       } 
