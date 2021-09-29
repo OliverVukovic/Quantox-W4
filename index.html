@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./w4.css">
+  <title>Quantox-Week 4</title>
+</head>
+
+<body>
+
+    <section>
+      <div class="logo">
+        <img src="./assets/desktop/logo.svg" alt="Logo">
+      </div>
+
+      <div class="box">
+        
+        <h1>PUBLISH YOUR PODCASTS <span>EVERYWHERE</span></h1>
+  
+        <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+          Apple Podcasts, Google Podcasts, Pocket Casts and more!</p> 
+
+        <div class="email">
+          <div>
+            <input id="email" type="email" name="email" value="" placeholder="Email adress">
+          </div>  
+  
+          <div class="btn">
+            <button type="button" onclick="jsFunction()">Request access</button>  
+          </div>
+
+          <div id="correct" class="hidd">
+            <p class="label-correct">Your email is correct!</p>
+          </div>
+
+          <div id="wrong" class="hidd">
+            <p class="label-wrong">Oops! Please check Your email</p>
+          </div>
+        </div>
+
+        <div class="footer-images">
+          <img src="./assets/desktop/spotify.svg" alt="Spotify" class="spotify">
+          <img src="./assets/desktop/apple-podcast.svg" alt="Apple-podcast" class="apple">
+          <img src="./assets/desktop/google-podcasts.svg" alt="Google-podcasts" class="google">
+          <img src="./assets/desktop/pocket-casts.svg" alt="Pocket-casts" class="pocket">
+        </div>
+      </div>
+      <div class="pattern">
+        <img src="./assets/desktop/bg-pattern-dots.svg" alt="Pattern">
+      </div>
+    </section>  
+
+    <script>
+      function jsFunction() {
+
+      let emailValue=document.getElementById("email").value;
+        if (!emailValue || !validateEmail(emailValue)) {
+          document.getElementById("correct").className="hidd";
+          document.getElementById("wrong").className="";
+        } else {
+          document.getElementById("correct").className="";
+          document.getElementById("wrong").className="hidd";
+        }
+      } 
+      function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+        }
+    </script>
+    
+</body>
+</html>

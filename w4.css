@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    background-color: #121725;
+    font-family: 'Chivo', sans-serif;
+    /*overflow: hidden;*/
+    text-align: left;
+    padding: 15vh 0;
+}
+
+section {
+    background-image: url(./assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 75%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    position: relative;
+    width: 90%;
+    height: auto;
+}
+
+.logo {
+    position: absolute;
+    max-width: 134px;
+    left: 0;
+    top: 0;
+    transform: translate(0,-50%);
+}
+
+.pattern {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(0,50%);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    max-width: 723px;
+    background-color: #121725;
+    /*gap: 30px;*/
+    padding-top: 90px;
+    margin-top: 135px;
+}
+
+h1 {
+    font-weight: 300;
+    color: #54e6af;
+    font-size: 52px;
+}
+
+span {
+    color: #ffffff;
+}
+
+p {
+    font-weight: 300;
+    font-size: 18px;
+    color: #c2cbe5;
+    max-width: 445px;
+    line-height: 28px;
+    margin-top: 25px;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    max-width: 425px;
+    margin-top: 40px;
+}
+
+input {
+    background-color: #2c344b;
+    color: #979797;
+    width: 425px;
+    height: 55px;
+    border: none;
+    border-radius: 25px;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    font-weight: 600;
+}
+
+button {
+    color: #121725;
+    width: 160px;
+    height: 46px;
+    background-color: #54e6af;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-left: -170px;
+    line-height: 28px;
+    font-style: normal;
+}
+button:hover {
+    background-color: #b3ffe2;
+    color: #121725;
+    cursor: pointer;
+}
+
+.hidd {
+    visibility: hidden;
+}
+
+.label-correct {
+    color: green;
+    font-size: 12px;
+}
+
+.label-wrong {
+    color: #fb3e3e;
+    font-size: 12px;
+}
+
+.footer-images {
+    background-color: linear-gradient(
+        rgb(44, 52, 75, 0.9), 
+        rgb(44, 52, 75, 0.9)
+      );
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+#email {
+    color: white;
+}
+
+
+@media (max-width: 780px) {
+
+    body {
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    section {
+        width: 95%;
+        background-image: url(./assets/tablet/image-host.jpg);
+        background-size: 70%;
+    }
+
+    .box {
+        max-width: 635px;
+        padding-top: 95px;
+        margin-top: 264px;
+    }
+
+    .logo {
+        transform: none;
+        padding-top: 50px;
+    }
+
+    .pattern {
+        transform: translate(-220%, 205%);
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    p {
+        margin-top: 30px;
+    }
+
+    .email {
+        margin-top: 40px;
+    }
+
+    .footer-images {
+        max-width: 535px;
+        margin-top: 33px;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    body {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    section {
+        background-image: linear-gradient(
+            rgba(18, 23, 37, 0.9), 
+            rgba(18, 23, 37, 0.9)
+          ), url(./assets/mobile/image-host.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .logo {
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 60px;
+    }
+
+    .box {
+        background: none;
+        max-width: 100%;
+        align-items: center;
+    }
+    
+    h1 {
+        max-width: 100%;
+        font-size: 27px;
+        line-height: 38px;
+        padding-top: 60px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 90%;
+    }
+
+    .footer-images {
+        order: 3;
+        justify-content: center;
+        gap: 20px;
+        max-width: 70%;
+    }
+
+    .email {
+        justify-content: center;
+        gap: 15px;
+        order: 4;
+        max-width: 90%;
+        margin-top: 30px;
+    }
+
+    input {
+        max-width: 75%;
+        max-height: 46px;
+        margin-top: 20px;
+        line-height: 28px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    button {
+        line-height: 28px;
+        margin: 0;
+        width: 100%;
+        max-height: 46px;
+    }
+
+    .hidd {
+        max-width: 100%;
+    }
+
+    .label-correct {
+        max-width: 100%;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .label-wrong {
+        max-width: 100%;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .spotify {
+        width: 25%;
+    }
+
+    .apple {
+        width: 10%;
+    }
+
+    .google {
+        width: 30%;
+    }
+
+    .pocket {
+        width: 25%;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .logo {
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .email {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    input {
+        max-width: 250px;
+    }
+
+    button {
+        max-width: 250px;
+    }
+
+    .hidd {
+        padding-bottom: 0%;
+    }
+
+    .label-correct {
+        margin-bottom: 0px;
+        order: 4;
+    }
+
+    .label-wrong {
+        margin-bottom: 10px;
+        order: 3;
+    }
+    
+}
+
+
+@media only screen and (min-device-width: 480px) 
+and (max-device-width: 700px) 
+and (orientation: landscape) {
+    
+    body {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    section {
+        background-image: linear-gradient(
+            rgba(18, 23, 37, 0.9), 
+            rgba(18, 23, 37, 0.9)
+          ), url(./assets/mobile/image-host.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+        justify-content: center;
+    }
+
+    .logo {
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+    }
+
+    .box {
+        background: none;
+        max-width: 80%;
+        max-height: 280px;
+        align-items: center;
+        justify-content: center;
+        overflow: scroll;
+        gap: 10px;
+    }
+
+    .pattern {
+        display: none;
+    }
+    
+    h1 {
+        max-width: 100%;
+        font-size: 27px;
+        line-height: 38px;
+        padding-top: 80px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 90%;
+        margin-top: 0px;
+    }
+
+    .footer-images {
+        order: 3;
+        justify-content: center;
+        gap: 10px;
+        max-width: 70%;
+        margin-top: 10px;
+    }
+
+    .email {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        order: 4;
+        max-width: 90%;
+        margin-top: 10px;
+    }
+
+    input {
+        max-width: 75%;
+        max-height: 46px;
+        margin-top: 10px;
+        line-height: 28px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    button {
+        line-height: 28px;
+        margin: 0;
+        width: 100%;
+        max-height: 46px;
+    }
+
+    .hidd {
+        max-width: 100%;
+    }
+
+    .label-correct {
+        max-width: 100%;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .label-wrong {
+        max-width: 100%;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .spotify {
+        width: 25%;
+    }
+
+    .apple {
+        width: 10%;
+    }
+
+    .google {
+        width: 30%;
+    }
+
+    .pocket {
+        width: 25%;
+    }
+
+}
